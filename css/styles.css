@@ -6,7 +6,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
   color: #3a3a3a;
-  margin: 0;
+  margin: auto;
 } 
 
 
@@ -43,6 +43,7 @@ ul {
   padding: 0;
   
 }
+
 /* Bild_ Potrait*/
 
 .bild_0 {
@@ -54,20 +55,9 @@ ul {
   padding-bottom: 15px;
 }
 
-.bild_2, .bild_3 {
-  display: block;
-  padding-top: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 25px;
-}
-
 .bild_1,.bild_2, .bild_3, .bild_4, .bild_5, .bild_6{
   width: 100%;
-  padding-left: 2px;
-  padding-right: 2px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+ 
 }
 
 .top_potrait, .about-myself, .mp_quote {
@@ -76,11 +66,20 @@ ul {
   padding-right: 20px;
   text-align: center;
 }
+.about-myself {
+  margin-bottom: auto;
+  padding-bottom: 20px;
+}
+
+
 
 /* Subheadings*/
 
-h2 {
-  padding-top: 60px;
+.tag_1 {
+  display: block;
+  padding-top: 80px;
+  padding-bottom: 80px;
+ 
   text-align: center;
   text-transform:uppercase;
   font-size: medium;
@@ -94,24 +93,25 @@ h2 {
 
 .marketing_page, .search_page, .travel_app, .map_spots, .photo_gallery, .calculator, .contact {
   text-align: center;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+
 }
 
 .contact {
   padding-top: 50px;
-  padding-bottom: 90px;
+  padding-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /*Footer*/
+
 .footer_list {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   font-weight: bold;
   color: black;
+  padding: 10px 15px 30px;
 }
 
 .footer_item {
@@ -126,20 +126,181 @@ h2 {
 }
 
 
-/* .footer_item {
-  margin-right: 2rem;
-  color: black;
-  padding-bottom: 3rem;
-} */
+@media (min-width: 320px) {
 
-/* .footer_item:first-child, .footer_item2:last-child{
-  margin-right: auto;
-  margin-left: 10px;
-  font-weight: bold;
-} */
+  .main-header,
+  .main-nav {
+    display: grid;
+  }
 
-/* .footer_item:last-child {
-  margin-left: auto;
-  margin-right: 10px;
-  font-weight: bold;
-} */
+  .a0 {
+    width: 100vw;
+    height: 57vh;
+    background-color: #f8f7f7;;
+  }
+
+  .foot_bg {
+    background-color: #f8f7f7;
+  }
+
+
+ .a1, .a2, .a3, .a33, .a22, .a11, .contact_info {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 70px;
+} 
+
+} 
+.footer_left {
+  display: none;
+}
+
+
+@media (min-width: 768px) {
+  /* .main-nav  {
+    display: flex;
+    flex-direction:row;
+    justify-content:center
+  } */
+
+  .a0 {
+    width: 100vw;
+    height: 35vh;
+    background-color: #f8f7f7;
+  } 
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    /* padding: 15px; */
+    
+  }
+  
+  .name {
+    padding-top: 20px;
+  }
+ 
+
+   .bild_0 {
+    float: right;
+    padding-top: 30px;
+    width: 40%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  } 
+  .about-myself {
+    text-align: left;
+    padding-top: 25px;
+    padding-right: 50px;
+    padding-left: 0px;
+  }  
+  .tag_1 {
+    margin-top: 20%;
+    align-items: center;
+  }
+
+  .footer_item2 {
+    display: none;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  .tag_1 {
+    display: block;
+    padding-top: 100px;
+    padding-bottom: 80px;
+   
+    text-align: center;
+    text-transform:uppercase;
+    font-size: medium;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  /* .main-header,.main-nav {
+    
+    display: flex;
+    justify-content: space-between;
+  
+  } */
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+    padding: 15px 15px;
+    
+  }
+  
+  .a0 {
+    width: 100vw;
+    height: 40vh;
+    background-color: #f8f7f7;
+    padding-bottom: 20px;
+  } 
+}
+
+
+
+
+  @media (min-width: 1250px) {
+    /* .main-header,.main-nav {
+      
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      font-size: larger;
+    
+    } */
+  
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 5px;
+      padding: 15px 15px;
+      
+    }
+    .a0 {
+      padding-bottom: 20px;
+      height: fit-content;
+    }
+
+    .tag_1 {
+      display: block;
+      padding-top: 100px;
+      padding-bottom: 80px;
+     
+      text-align: center;
+      text-transform:uppercase;
+      font-size: x-large;
+    }
+
+    .about-myself {
+      text-align: left;
+      padding-top: 25px;
+      padding-right: 50px;
+      font-size: x-large;
+    }
+
+    .marketing_page, .search_page, .travel_app, .map_spots, .photo_gallery, .calculator, .contact {
+      text-align: center;
+      font-size: large;
+    
+    }
+
+    /* .footer_list {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: larger;
+      color: black;
+      padding: 10px 15px 30px;
+    } */
+  }
